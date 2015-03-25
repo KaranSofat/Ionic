@@ -1,0 +1,43 @@
+<ion-view view-title="User Data" name="login-view">
+ <ion-content class="padding">
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">About</h2>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="about-heading">Who we are</h4>
+        <img class="img-responsive" src="img/about/1.jpg" alt="">
+        <p class="text-muted">Lorem ipsum dolor sit amet, sit ad omnis illud reprehendunt, et nominati accommodare nec. In diceret laboramus reprimique cum. Quo ad error iudico accusata. An congue oratio maiorum eum. No est feugait euripidis. Sed cu homero iuvaret, nam nonumy omittam vulputate at.</p>
+      </div>
+      <div class="col-md-4">
+        <h4 class="about-heading">Our history</h4>
+        <h4>2009-2011</h4>
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. An congue oratio maiorum eum. No est feugait euripidis.</p>
+        <h4>March 2012</h4>
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        <h4>December 2014</h4>
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+      </div>
+      <div class="col-md-4">
+        <h4 class="about-heading">Why choose us?</h4>
+        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipisicing elit</li>
+          <li>Minima maxime quam architecto quo</li>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipisicing elit</li>
+          <li>Minima maxime quam architecto quo</li>
+          <li>Consectetur adipisicing elit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</ion-content>
+</ion-view>

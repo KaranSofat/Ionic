@@ -1,0 +1,11 @@
+<ion-view view-title="Home" name="login-view">
+
+
+
+    <ion-content class="padding">
+      <button class="button" ng-click="showActionsheet()">
+        Show Actionsheet
+      </button>
+
+
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view>
+<ion-content>
+<div class="list card">
+
+
+
+  <div class="item item-body">
+ <div class="imagecss" ng-repeat="(key , value) in images|limitTo:itemsLimit()"><img src={{value.image}} ng-click="showImages($index,value.imagelarge,value.title)"/> <br/> {{value.title}}</div>
+
+</div>
+
+    <button ng-show="hasMoreItemsToShows()" ng-click="showMoreItemss()">Show more</button>  </ion-content>
+
+
+</ion-view>

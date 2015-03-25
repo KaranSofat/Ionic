@@ -1,0 +1,15 @@
+<ion-view view-title="User Data" name="login-view">
+ <ion-content class="padding">
+<ul>
+<!-- <li ng-repeat="(key , value) in datanew">{{value}} <a href="#delete" ng-click()>Delete</a></li>-->  
+<div ng-repeat="x in datanew">
+<li>{{x.name}} </li>
+<li>{{x.email}} </li>
+<li>{{x.password}} </li>
+<a href="#delete" ng-click=delete($index)>Delete</a>
+<a href="#update" ng-click=update($index)>Update</a>
+</div>
+</ul>
+
+  </ion-content>
+</ion-view>

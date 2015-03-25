@@ -1,0 +1,14 @@
+<ion-view view-title="Register">
+<ion-content>
+<h1>Registered Users</h1>
+<div ng-repeat="(key , value) in user">
+<li>{{value.first}}</li>
+<li>{{value.last}}</li>
+<li>{{value.comment}}</li>
+<li><a href="#" ng-click="delete($index)">Delete</a></li>
+<li><a href="#" ng-click="edit($index)">Edit Information</a></li>
+</div>
+
+</ion-content>
+
+</ion-view>

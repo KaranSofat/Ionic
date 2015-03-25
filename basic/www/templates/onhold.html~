@@ -1,0 +1,24 @@
+<ion-view title="Loading">  
+<ion-header-bar class="bar-positive">
+    <h1 class="title">{{myTitle}}</h1>
+  </ion-header-bar>
+
+<ion-content class="padding">
+ <div on-drag-right ="alerts()" class="row responsive-lg">
+  <div class="col">
+    <div class="row responsive-md">
+      <div class="col">Hold me</div>
+      <div class="col">Hold me</div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="row responsive-sm">
+      <div class="col">col</div>
+      <div class="col">col</div>
+    </div>
+  </div>
+</div>
+</ion-content>
+</ion-view>
+ 
+ 

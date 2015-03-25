@@ -1,0 +1,25 @@
+<ion-view view-title="Register">
+<ion-content>
+<div class="list">
+<form>
+  <label class="item item-input">
+    <input type="text" placeholder="First Name" name="first" ng-model="user.first">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Last Name" name="last" ng-model="user.last">
+  </label>
+  <label class="item item-input">
+    <textarea placeholder="Comments" name="comment" ng-model="user.comment"></textarea>
+  </label>
+<label class="item item-input">
+    <input type="file" name="file" ng-model="myFile"></textarea>
+  </label>
+</div>
+
+<button class="button button-dark" style="margin-left:150px;" ng-click="addData()">
+ Submit
+</button>
+</form>
+</ion-content>
+
+</ion-view>

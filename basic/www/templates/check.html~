@@ -1,0 +1,43 @@
+<ion-view title="Loading">
+        <ion-header-bar>
+          <h1 class="title">Loading</h1>
+        </ion-header-bar>
+        <ion-content has-header="true">
+           <div class="list">
+        
+        <ion-checkbox ng-repeat="item in devList"
+                      ng-model="item.checked" 
+                      ng-checked="item.checked">
+          {{ item.text }}
+        </ion-checkbox>
+        
+        <div class="item">
+          <pre ng-bind="devList | json"></pre> 
+        </div>
+        
+        <div class="item item-divider"> 
+          Notifications
+        </div>
+        
+        <ion-checkbox ng-model="pushNotification.checked"
+                      ng-change="pushNotificationChange()">
+          Push Notifications
+        </ion-checkbox>
+        
+        <div class="item">
+          <pre ng-bind="pushNotification | json"></pre> 
+        </div>
+        
+        <ion-checkbox ng-model="emailNotification"
+                      ng-true-value="'Subscribed'"
+                      ng-false-value="'Unubscribed'">
+          Newsletter
+        </ion-checkbox>
+        <div class="item">
+          <pre ng-bind="emailNotification | json"></pre> 
+        </div>
+        
+      </div>
+      
+        </ion-content>
+      </ion-view>

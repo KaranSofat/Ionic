@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="demo" ng-controller="DemoCtrl">
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Client-side authentication demo</title>
+</head>
+
+<body>
+
+<div>
+  <div>
+  <form>
+    <div ng-show="!loggedIntoGoogle"><button ng-click="login()">Login To Google</button></div>
+    <div ng-show="loggedIntoGoogle">Choose your calendar: <select ng-model="selectedCalendar" ng-options="calendar.summary for calendar in calendars"></select></div>
+    <div ng-show="!loggedIntoGithub"><button ng-click="loginToGithub()">Login to Github</button></div>
+    <div ng-show="loggedIntoGithub">Choose your Github org: <select ng-model="selectedOrganization" ng-options="org.login for org in organizations" ng-change="loadMembers()"></select></div>
+    Lunch on: <input type="date" ng-model="lunchDate" />
+    At: <input type="time" ng-model="lunchTime" />
+    <button ng-click="addEvent()" ng-disabled="!selectedCalendar || !selectedOrganization">Lunch me!</button>
+  </form>
+  </div>
+
+  <div ng-show="chosenMember">
+    Woot! Your going to lunch with {{chosenMember.name}} <img ng-src="{{chosenMember.avatar_url}}" />
+    <div ng-show="newEvent"><a href="{{newEvent.htmlLink}}">Calendar entry</a></div>
+  </div>
+</div>
+
+<script src="vendor/underscore.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="vendor/ui-bootstrap-tpls-0.6.0.js"></script>
+<script src="bower_components/angular-googleapi/src/angular-googleapi.js"></script>
+<!-- script src="vendor/angular-googleapi.js"></script -->
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+<script src="controllers.js"></script>
+<script>
+  function googleClientLoaded() {
+    gapi.auth.init(function () { });
+  }
+</script>
+<script src="https://apis.google.com/js/client.js?onload=googleClientLoaded"></script>
+
+
+</body>
+</html>

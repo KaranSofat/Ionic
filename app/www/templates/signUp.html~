@@ -1,0 +1,33 @@
+<ion-view view-title="SignUp" name="login-view">
+ <ion-content class="padding">
+<div class="formCenter">
+<form name="signUp" novalidate>
+	<label>Name</label>
+		<input type="text" name="name" style="border:1px solid;" ng-model="user.name" required>
+		<span style="color:red" ng-show="signUp.name.$dirty && signUp.name.$invalid">
+  		<span ng-show="signUp.name.$error.required">Username is required.</span>
+  		</span>
+	<label>Email</label>
+		<input type="email" name="email" style="border:1px solid;" ng-model="user.email" required>
+		<span style="color:red" ng-show="signUp.email.$dirty && signUp.email.$invalid">
+  		<span ng-show="signUp.email.$error.required">Email is required.</span>
+  		</span>
+	<label>Password</label>
+		<input type="password" name="password" style="border:1px solid;" ng-model="user.password">
+		<span style="color:red" ng-show="signUp.password.$dirty && signUp.password.$invalid">
+  		<span ng-show="signUp.password.$error.required">password is required.</span>
+  		</span>
+		<label>Image</label><br>
+		<input type="file" name="password" style="border:1px solid;" ng-model="user.file"><br>
+
+		<input type="button" value="submit" ng-click="addData()"  ng-disabled="signUp.name.$dirty && signUp.name.$invalid||
+  signUp.email.$dirty && signUp.email.$invalid||
+  signUp.password.$dirty && signUp.password.$invalid">
+</form>
+</div>
+
+
+
+
+</ion-content>
+</ion-view>

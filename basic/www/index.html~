@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+ <script src="js/controllers.js"></script>
+
+
+  </head>
+  <body ng-controller="homeCntrl" ng-app="basic">
+<ion-nav-view></ion-nav-view>
+    
+<ion-side-menus enable-menu-with-back-views="false">
+
+        <ion-side-menu-content>
+          <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+              <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+              </button>
+            </ion-nav-buttons>
+          </ion-nav-bar>
+
+          <ion-nav-view name="menuContent"></ion-nav-view>
+        </ion-side-menu-content> 
+
+        <ion-side-menu side="left">
+          <ion-header-bar class="bar-assertive">
+            <h1 class="title"> Menu</h1>
+          </ion-header-bar>
+          <ion-content>
+            <ul class="list">
+ 
+<a class="item" href="#loading" menu-close>Loading</a>
+<a class="item" href="#check" menu-close>CheckBox</a>
+<a class="item" href="#radio" menu-close>Radio</a>
+<a class="item" href="#toggle" menu-close>Toggle</a>
+<a  class="item"href="#onhold" menu-close>On Hold</a>
+<a class="item" href="#angularServices" menu-close>Angular Services</a>
+<a class="item" href="#list" menu-close>List</a>
+<a class="item" href="#repeat" menu-close>Repeat</a>
+<a class="item" href="#pop" menu-close>Pop Over</a>
+<a class="item" href="#slide" menu-close>Slide</a>
+<a class="item" href="#popUp" menu-close>PopUp</a>
+            </ul>
+          </ion-content>
+        </ion-side-menu>
+
+      </ion-side-menus>
+    
+  </body>
+</html>
