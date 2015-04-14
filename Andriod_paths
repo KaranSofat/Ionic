@@ -1,0 +1,7 @@
+export PATH="$HOME/android-sdk/tools:$ANDROID_HOME/platform_tools:$PATH"
+export ANDROID_HOME="$HOME/android-sdk"
+export HOME="/home/ubc"
+export HOME="/home/indranil"
+export HOME="/home"
+
+ionic platform add android
