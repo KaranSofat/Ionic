@@ -1,0 +1,41 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-view>
+  <ion-content class="padding">
+     <div class="logo_align">
+	   <img ng-src="img/asset/greenpal-mobile-logo.png">
+	 </div>
+    <form>
+	 <div class="list custom-form">
+		 <div class="img_login_right">
+		    <img ng-src="img/asset/log-in-screen-gary.png">
+		</div>
+	  <label class="item item-input item-floating-label border-bottom">
+		<span class="input-label">Email Address</span>
+		<i class="login_icon"></i><input type="email" placeholder="Email Address" class="padding_input" ng-model="user.email" required>
+	  </label>
+
+	   <label class="item item-input item-floating-label border-bottom">
+		<span class="input-label">Password</span>
+		<i class="pass_icon"></i><input type="password" placeholder="Password" class="padding_input" ng-model="user.password" required>
+	  </label>
+	</div>
+	 <div class="login_align">
+       <button ng-invalid="login.$invalid" ng-click="login()" class="button button-custom top">
+      login
+     </button>
+	 </div>
+	 
+
+
+ </form>
+	<div class="forget_pass">
+	  <span class="fontsforweb_fontid_12950"  ng-click= "resetPassword()">Forget My Password</span>
+	</div>
+  
+  </ion-content>
+</ion-view>

@@ -1,0 +1,76 @@
+<ion-view view-title="{{allBidsInfo.company.company_name}}">
+  <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+  <ion-content>
+ 
+   <div class="card user_wrap">
+          <div class="wrap_avatar"> 
+             <img src="{{allBidsInfo.avatar}}" alt="">
+             <h2 class="fontsforweb_fontid_12950">${{allBidsInfo.bids.bid_amount}}</h2>
+          </div>
+          
+          <div class="wrap_rating">
+            <div class="rate_user">
+              
+              
+              <div>
+              
+           <p>   <div fundoo-rating rating-value="ratings" max="max" readonly="true" style="float:none;"></div></p></div>
+            </div>
+            <div>({{ratings}} Avg. {{reviews_count}} Reviews)</div>
+          </div>
+         
+      <div class="item item-text-wrap fontsforweb_fontid_12950">
+        I am the best in the business over 10 years experience and love mowering lawns.
+      </div>
+  </div>
+ 
+   <div class="vendor_work fontsforweb_fontid_12950">
+      
+     <h2> OUR WORK </h2>
+     
+    
+
+     <ion-scroll direction="x" class="wide-as-needed" >
+        <div class="container_images">
+          <div class="content_appointment_wrap_image" ng-repeat="work_photo in allBidsInfo.work_photos track by $index" >
+             <img ng-src="{{work_photo}}" class="fullscreen-image" />
+          </div>
+         
+        </div>
+      </ion-scroll>
+
+      
+
+   </div>
+
+   <div class="vendor_work fontsforweb_fontid_12950">
+      
+     <h2>REVIEWS </h2>
+     <div ng-if="allBidsInfo.reviews!='null'"></div>
+     <div class="list card review" ng-repeat="reviews in allBidsInfo.reviews track by $index">
+          <div class="item">
+            <p><div fundoo-rating rating-value="reviews.rating" max="max" readonly="true"></div></p><br/>
+            <p style="white-space: pre-line;width:100%;float:left;">{{reviews.text}}</p>
+          </div>
+          <i class="down_review ion-arrow-down-b"></i>
+          <h4 class="head_user fontsforweb_fontid_12950"> An , {{reviews.homeowner_name}}</h4>
+      </div> 
+    
+      </div>
+ 
+  </ion-content>
+   <ion-footer-bar class="trasnparent">
+           <div class="bar" style="background:transparent;">
+            <div class="content_lower_footer">
+                <button class="button button-full button-custom schedule_cut fontsforweb_fontid_12950" style="position: relative;top: -31px;" ng-click="pickMe(current_bid,allBidsInfo.homeowner.last_4_of_card_on_file)">
+                   Pick Me 
+                </button>
+           </div>
+         </div>
+    </ion-footer-bar>
+   
+</ion-view>

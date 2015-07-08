@@ -1,0 +1,26 @@
+<ion-view view-title="Dispute Cut">
+  <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>            
+  <ion-content class="dispute_cut_back">
+  <div class="dispute_cut">
+	<h1>Please add a picture of your lawn</h1>
+	<div class="dispute_camera">
+	   <div class=camera>
+	    <img ng-src="img/asset/camera.png">
+         </div>
+      </div>
+	<h1>What is the reason for dispute?</h1>
+	<textarea>
+     </textarea>
+	<div class="login_align">
+       		<button class="button button-custom top_dispute">
+      		Dispute Cut
+     	      </button>
+	 </div>			
+       </div>	
+
+ 
+  </ion-content>
+</ion-view>

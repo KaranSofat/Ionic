@@ -1,0 +1,37 @@
+<ion-view view-title="Review BC Cutter">
+  <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>            
+  <ion-content class="dispute_cut_back">
+  <div class="dispute_cut">
+	<h1>How Would you rate the quilty of lawn cut?</h1>
+	<div class="stars">
+		<div class="rate_user">
+          <!--    <rating ng-model="rate" max="max" readonly="true"></rating>-->
+              
+              
+               <div fundoo-rating rating-value="rate" max="max" readonly="true" style="float:none;"></div>
+            </div>
+            
+      </div>
+	<h1>What do you think of the service?</h1>
+	<textarea ng-model="appointment_review.comments">
+     </textarea>
+	 <div class="col col-50 auction_float">
+          	 <a class="button button-full button-custom auction_cut fontsforweb_fontid_12950" 	ng-click= "review()" >
+             Review
+             </a> 
+          </div>
+          <div class="col col-50 auction_float">
+          	 <a class="button button-full button-custom auction_cut fontsforweb_fontid_12950" 	href= "#no_appointment" >
+            Skip
+            </a> 
+
+
+        </div>		
+       </div>	
+
+ 
+  </ion-content>
+</ion-view>

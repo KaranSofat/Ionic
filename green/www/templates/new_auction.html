@@ -1,0 +1,53 @@
+<!--
+This template loads for the 'tab.friend-detail' state (app.js)
+'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+The FriendsCtrl pulls data from the Friends service (service.js)
+The Friends service returns an array of friend data
+-->
+<ion-view view-title="New Auction">
+
+   <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+  <ion-content style="background:#fff;">
+    <div class="new_auction_container">
+      
+      <h1 class="head_auction fontsforweb_fontid_12950">When would you like your lawn cut?</h1>
+      <input type="date" placeholder="Date" class="padding_input date_auction" ng-model="auction.service_date">
+      
+      <h1 class="head_auction fontsforweb_fontid_12950">Date flexibility</h1>
+      
+      
+      <div class="row">
+		  <div class="col col-85 auction_flex">
+		  	<input type="text" placeholder="1 day" class="padding_input date_auction flexibility_date" ng-model ="auction.flexibility">
+		  </div>
+		  <div class="col auction_col" ng-click="changeflex()"> 
+        <i class="auction_plus icon ion-plus-round"></i>
+		  	</div>
+	 </div>
+
+     
+      <h1 class="head_auction fontsforweb_fontid_12950">Comments</h1>
+      <textarea placeholder="Comments" ng-model="auction.comments" class="padding_input date_auction auction_textarea" ></textarea>
+         
+
+          <div class="col col-50 auction_float">
+          	 <button class="button button-full button-custom auction_cut fontsforweb_fontid_12950" ng-click="create_auction()">
+             Create
+             </button> 
+          </div>
+           
+          
+          <div class="col col-50 auction_float">
+    <a class="button button-full button-custom auction_cut fontsforweb_fontid_12950" 	href= "#lawn_cut" >
+             Cancel
+             </a>
+
+
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view view-title="Add Specific Dates">
+  <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>            
+  <ion-content class="dispute_cut_back">
+  <div class="dispute_cut" style=" margin-top: -40px;">
+	<h1>Your lawn will be mowed on these dates</h1>
+
+
+		
+	<div class="dispute_cameras" ng-repeat="date in full_month" >
+
+	  <span class="specificdate">{{ date | date:'MMMM d'}} {{ date | date:'yyyy'}}</span>
+	   <div class="specificdatecalender"><img ng-src="img/asset/calendar001.png"></div>  
+      </div>
+     <!-- <div class="dispute_cameras">
+	  <span class="specificdate">October 1st 2015</span>
+	   <div class="specificdatecalender"><img ng-src="img/asset/calendar001.png"></div>  
+      </div>-->
+
+   
+
+       </div>	
+   <div class="content_lower">
+         <button ng-click="gotourl('appointment')" class="button button-full button-custom schedule_cut fontsforweb_fontid_12950">
+        SET AND FORGET!
+        </button>
+
+
+ </div>
+  </ion-content>
+</ion-view>
