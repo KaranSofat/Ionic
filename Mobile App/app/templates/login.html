@@ -1,0 +1,23 @@
+<ion-view view-title="{{'Sign-In' | translate}}">
+    <ion-content>
+        <form ng-submit="doLogin()">
+            <div class="list">
+                <label class="item item-input">
+                    <i class="icon ion-email placeholder-icon"></i>
+                    <input type="text" placeholder="{{ 'Username' | translate }}" ng-model="loginData.username">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-ios-locked placeholder-icon"></i>
+                    <input type="password" placeholder="{{ 'Password' | translate }}" ng-model="loginData.password">
+                </label>
+            </div>
+            <button class="button button-positive center" type="submit" translate="Sign-In"></button>
+        </form>
+        <a href="#" class="margin-top-10" translate="Forgot-Password"></a>
+    </ion-content>
+    <ion-footer-bar class="bar-stable">
+      <div class="title font-small">
+        {{'Login-Terms-Conditions' | translate}}<a href="#" translate="Terms-Conditions"></a>
+      </div>
+    </ion-footer-bar>
+</ion-view>

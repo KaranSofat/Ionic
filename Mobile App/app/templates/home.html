@@ -1,0 +1,57 @@
+     <ion-view cache-view="false" view-title="{{navTitle}}">
+         <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+         </ion-nav-bar> 
+       
+       <ion-content>
+      <div class="container">
+       <div class="main-img">
+             <div class="img-container">
+               <img src="img/assets/Swar.jpg"  alt=""/>
+             </div>
+             <div class="cemera" ng-class="{'highlight':highlight}" ng-click="scan()"> <a href="#"> <cite class="ion-ios-camera"></cite> </a>
+               <p>Scan</p>
+            </div>          
+        </div>
+        
+        <div class="inner_container">  
+         <div class="list card" ng-if="checkins.checkin_at">
+          <div class="item item-avatar">
+            <img ng-src="{{userinfo.profilepic ? userinfo.profilepic : 'img/assets/avatar.jpg'}}">
+            <h2 class="checkin">{{ message }} <a ng-href="#/checkin">{{checkins.address | translate}}</a> </h2>
+            <p am-time-ago="checkins.checkin_at"></p>
+            <cite class="icono" ng-click="goto('lastcheckin')"> <i class="ion-android-more-horizontal"></i></cite>
+           </div>
+          </div>
+         
+          <div class="store_container">
+
+              <div class="clearfix"></div>
+              <div class="inline_button"> <span class="white_button"> {{'or Browse'| translate}}</span>  </div>
+          
+          </div>
+          
+          <div class="row">
+            <div class="wrap_activity">
+              <div class="col col-30">
+                <span><a href="#" ng-click="gotourl()"><img src="img/assets/product.png"></a></span>
+                 <p>{{ 'Products' | translate }}</p>
+              </div>
+             
+              <div class="col col-30" ng-click="gotourl()">
+                 <span><a href="#"><img src="img/assets/store.png" ></a> </span>
+                  <p>{{ 'Stores' | translate }}</p>
+              </div>
+              <div class="col col-30" ng-click="gotoOffers()">
+                <span ng-class="{'highlight':highlight}"><a href="#" ><img src="img/assets/offers.png" ></a></span>
+                 <p>{{ 'Offers' | translate }}</p>
+              </div>
+            </div>
+          </div> 
+         </div>
+
+     </div>
+
+       </ion-content>
+   </ion-view> 

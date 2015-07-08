@@ -1,0 +1,34 @@
+<ion-view hide-nav-bar="true" class="black-bg">
+  <ion-content>
+    <!-- Sliders -->
+    <ion-slide-box auto-play="true" does-continue="true" show-pager="true">
+      <ion-slide ng-repeat="image in ['img/ManageLoc1.jpg', 'img/BizListing1.jpg', 'img/Twirll_Board1.jpg']">
+        <img ng-src="{{image}}"/>
+      </ion-slide>
+    </ion-slide-box>
+
+    <!-- Text with strikethrough -->
+    <h4 class="strike-background"><span translate="Sign-Up-Or-Login"></span></h4>
+
+    <!-- FB Login and custom Registration button -->
+    <div class="center">
+      <!--<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false">-->
+      <!--</div>-->
+      <button class="button button-medium button-positive">
+        <i class="icon ion-social-facebook"></i> facebook
+      </button>
+      <a href="#registration" class="button button-medium button-stable margin-left-10">
+        <i class="icon ion-email"></i> {{ 'Email' | translate }}
+      </a>
+    </div>
+
+    <!-- Custom Login -->
+    <div class="light margin-top-10">{{'Have-Account' | translate}} <a href="#login" class="light" translate="Log-In"></a></div>
+
+    <!-- Terms and Conditions -->
+    <div class="light font-small center margin-top-10">
+      By Login, you agree to our <a href="#" class="stable" translate="Terms and Conditions"></a>
+    </div>
+
+  </ion-content>
+</ion-view>

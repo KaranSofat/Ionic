@@ -1,0 +1,46 @@
+     <ion-view view-title="{{navTitle}}">
+         <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+         </ion-nav-bar>    
+       <ion-content>
+        <div class="container">
+       
+         <div class="list card ">
+          <div class="item item-avatar margin_10">
+            <img ng-src="{{userinfo.profilepic ? userinfo.profilepic : 'img/assets/avatar.jpg'}}">
+            <h2 class="checkin">{{message | translate}} <a href="#">{{checkininfo.address | translate}} </a> </h2>
+            <p am-time-ago="lastcheckin.checkin_at"></p>
+            <cite><a href="#" class="follow" ng-class="{'following':follow_unfollow=='Following'}"><i class="ion-arrow-down-b"></i>{{ follow_unfollow | translate }} </a></cite>
+           </div>
+          </div>
+            <!--Image middle  -->
+          <div class="middle">
+            <div class="back"> 
+              <div class="cemera"> <a href="#"><cite class="ion-ios-camera"></cite> </a>
+                <p>Scan Items</p>
+              </div>
+            </div>
+            </div>
+
+          <div class="row">
+            <div class="wrap_activity store_wrap">
+              <div class="col col-30">
+                <span><a href="#" ng-click="gotourl()"><img src="img/assets/book.png"></a></span>
+                 <p>{{ 'View Catalog' }}</p>
+              </div>
+             
+              <div class="col col-30" ng-click="gotourl()">
+                 <span><a href="#"><img src="img/assets/history.png" ></a> </span>
+                  <p>{{ 'History' }}</p>
+              </div>
+
+              <div class="col col-30" ng-click="gotourl()">
+                <span><a href="#"><img src="img/assets/offers.png"></a></span>
+                 <p>{{ 'Offers' }}</p>
+              </div>
+            </div>
+          </div> 
+         
+       </ion-content>
+   </ion-view>

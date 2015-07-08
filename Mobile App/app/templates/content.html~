@@ -1,0 +1,96 @@
+     <ion-view view-title="Harry Hatti">
+         <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+         </ion-nav-bar>    
+       <ion-content>
+ 	   <div class="list">
+		<ion-item class="li_header">
+			25 Items Found in <b>'Henna'</b>
+		</ion-item>
+ 
+		<a ng-to-black class="item item-thumbnail-left content_bck" ng-repeat="x in contents" hold="test(x)">
+          		<img ng-src="{{x.productpic ? x.productpic : 'img/content.jpg'  }}"/>
+          		<h2 ng-click="productDetail(x)" >{{x.product_name}}</h2>
+			
+				
+          		<h2 class="item_weight">100g</h2>
+	 		 <div class="deal">
+				<img ng-src="img/deal.jpg">
+			</div>	
+	   		<div class="cart">
+				<img ng-src="img/cart.jpg">
+
+			</div>	
+         		 <h4 class="textItem">300 AUD /{{x.unit}}</h4>
+		
+	  		<h5>${{x.selling_price}} AUD</h5>     
+
+		</a>
+
+		
+      </div>
+       </ion-content>
+	<ion-footer-bar ng-show="longTap">
+	<button class="button button-stable content_button" ng-click="addCart()">
+  		Add to Cart
+	    </button>
+	<button class="button button-stable content_button content_col" ng-click="checkOut()">
+  		Buy Now
+	    </button>
+
+	</ion-footer-bar>
+<style>
+
+.item h5
+{
+text-decoration: line-through;
+color: #c2c2c2;
+
+}
+.item h4
+{
+color:#266BAB;
+}
+.deal > img {
+   margin-left: 10%;
+      width: 19%;
+}
+.cart > img {
+   float: right;
+    margin-top: -7%;
+    width: 12%;
+}
+.item_weight
+{
+float:left;
+}
+.content_bck
+{
+background:white;
+border:1px solid white;
+}
+.content_button
+{
+padding:0px 58px !important;
+}
+.content_col
+{
+background:#2D7ECA !important;
+color:white !important;
+}
+.deal {
+    height: 25px;
+}
+.textItem {
+    float: none !important;
+  
+    margin-left: 0% !important;
+   font-size: 12px !important;
+}
+</style>
+
+   </ion-view>
+
+
+

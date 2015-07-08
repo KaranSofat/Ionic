@@ -1,0 +1,110 @@
+angular.module('twirll.controllers')
+
+  .controller('ItemCtrl',
+  	function($scope,$log,$state,localStorageService,$translate ,//ng resources
+    apiUrl//constants
+    ){
+	this.totalitems = [];
+  	for (var i = 0; i < 100; i++) this.totalitems.push(i);
+	$scope.totalitems = this.totalitems;
+       	//console.log($scope.totalitems);
+	var Items  = localStorageService.get('itemDetail');
+        $scope.items =  Items[0];
+	
+        console.log($scope.items.quantity);
+        $scope.gotocat =  function(){
+            $state.go('Catal');
+        }
+		
+         //header for home page
+     //header for page
+         $scope.navTitle =  '<span class="logo"><cite>Check-in</cite></span>'+ 
+                  '<span class="icons_all">'+
+                       '<a href="#" ng-click="gotourl()"> <img src="img/assets/bell.png"> </a><a href="#" ng-click="takeback()"> <img src="img/assets/cart.png"></a><a href="#" class="ion-android-more-vertical"></a></span>';
+
+
+  	})
+  
+.directive('slideable', function () {
+    return {
+        restrict:'C',
+        compile: function (element, attr) {
+            // wrap tag
+            var contents = element.html();
+            element.html('<div class="slideable_content" style="margin:0 !important; padding:0 !important" >' + contents + '</div>');
+
+            return function postLink(scope, element, attrs) {
+                // default properties
+                attrs.duration = (!attrs.duration) ? '1s' : attrs.duration;
+                attrs.easing = (!attrs.easing) ? 'ease-in-out' : attrs.easing;
+                element.css({
+                    'overflow': 'hidden',
+                    'height': '0px',
+                    'transitionProperty': 'height',
+                    'transitionDuration': attrs.duration,
+                    'transitionTimingFunction': attrs.easing
+                });
+            };
+        }
+    };
+})
+.directive('slideToggle', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            
+            var target = document.querySelector(attrs.slideToggle);
+            
+            attrs.expanded = false;
+            element.bind('click', function() {
+                var sign  =  element.html();
+		
+                if(sign === '+'){
+		 //element.bind('click', function() {
+		 //element.css("background-color", "black");
+		element.html('-');
+		//	})	
+                    //
+                }else{
+                    element.html('+');
+                }
+                var content = target.querySelector('.slideable_content');
+               
+                if(!attrs.expanded) {
+                    content.style.border = '1px solid rgba(0,0,0,0)';
+	
+                    var y = content.clientHeight;
+                    content.style.border = 0;
+                    target.style.height = y + 'px';
+                } else {
+                    target.style.height = '0px';
+                }
+                attrs.expanded = !attrs.expanded;
+            });
+        }
+    }
+})																																																																																																																																																																																																																																																																																																																																																		
+/*.directive('ngToBlack', function() {
+    return {
+        restrict: 'AE',
+        replace: true,
+        link: function(scope, elem, attrs) {
+            elem.bind('click', function() {
+		 var sign  =  elem.html();
+		 if(sign === '+'){
+                	elem.css("background-color", "none");
+		}
+		else
+		{
+			elem.css("background-color", "black");
+		}
+               
+            });
+            elem.bind('mouseover', function() {
+                elem.css('cursor', ' ');
+            });
+        }
+    };
+});*/
+
+

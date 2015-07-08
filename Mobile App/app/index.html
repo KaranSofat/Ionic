@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Twirll</title>
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+  </head>
+  <body ng-app="twirll">
+
+  <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-nav-view>
+  </ion-nav-view>
+
+    <!-- ionic/angularjs js -->
+    <!-- Used specifically for ajax module to log client side unhandled exceptions to server -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/angular-moment/angular-moment.min.js"></script>
+
+    <script src="lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="lib/stacktrace-js/stacktrace.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+     <!--ngCordova -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+
+    <script src="js/app-constants.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+  
+</html>

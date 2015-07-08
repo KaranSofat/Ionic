@@ -1,0 +1,40 @@
+     <ion-view view-title="Harry Hatti">
+         <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+         </ion-nav-bar>    
+       <ion-content>
+
+<div class="manul ">
+	   <div class="topName">	
+	    <h1> Harry Hatti</h1>
+	    </div>			
+            <div class="about main_col">
+               <div class="intro" ng-repeat="store in stores">
+                       <img src="img/about.jpg" alt=""/>
+                       <h1><strong> {{store.location_name}} </strong> </h1>
+                       <h4><strong style="font-weight:normal"> {{store. businesscategoryname}}  </strong> {{store.distance | number:1 }} km</h4>
+                       <p>Boasting seven world class department stores and more 
+                        than  400  stores,  boutiques,  and  restaurants,  King  of
+                        Prussia has more pure retail shopping space than ...</p>                                             
+                 </div>
+            </div>       
+
+
+</div>
+
+</ion-content>
+<style>
+.main_col
+{
+background:white;
+}
+.topName h1
+{
+font-size: 16px;
+    margin-left: 2%;
+    margin-top: 2% !important;
+}
+</style>
+
+</ion-view>

@@ -1,0 +1,285 @@
+<ion-view view-title="{{'Lastcheckin' | translate}}">
+    <ion-content>
+
+         
+        <div class="manul">
+            <div class="about">
+                 <div class="intro">
+			<div class="row">
+ 				<div class="col-25">
+  					 <img src="img/about.jpg" alt=""/>
+ 				</div>
+				 <div class="col-67">
+  					 <div class="row">
+    						<div class="col main_name">
+							HArri HAtti
+    						</div>
+    						 <div class="col remain_name">
+							Marina BAy
+    						</div>
+   					</div>
+   					<div class="row">
+    						<div class="col remain_name">
+							Shopping Mall
+    						</div>
+   						  <div class="col remain_name">
+							I Km Awy
+    						</div>
+   					</div>
+ 				</div>
+				 <div class="col follow_button">
+  					follow
+ 				</div>
+
+			</div>
+			<p>Boasting seven world class department stores and more 
+                        than  400  stores,  boutiques,  and  restaurants,  King  of
+                        Prussia has more pure retail shopping space than ...</p>  
+			<div class="row ">
+				<div class="col-25 small_f">
+					I will 2h ago
+				</div>
+				<div class="col-25 small_f">
+					6:40pm 24-feb-2015
+				</div>
+				<div class="col-25 checkout_button">
+					checkout
+				</div>
+			</div>
+                 </div>	
+                                    <div class="intro">
+			<div class="row">
+ 				<div class="col-25">
+  					 <img src="img/about.jpg" alt=""/>
+ 				</div>
+				 <div class="col-67">
+  					 <div class="row">
+    						<div class="col main_name">
+							HArri HAtti
+    						</div>
+    						 <div class="col remain_name">
+							Marina BAy
+    						</div>
+   					</div>
+   					<div class="row">
+    						<div class="col remain_name">
+							Shopping Mall
+    						</div>
+   						  <div class="col remain_name">
+							I Km Awy
+    						</div>
+   					</div>
+ 				</div>
+				 <div class="col follow_button">
+  					follow
+ 				</div>
+
+			</div>
+			<p>Boasting seven world class department stores and more 
+                        than  400  stores,  boutiques,  and  restaurants,  King  of
+                        Prussia has more pure retail shopping space than ...</p>  
+			<div class="row ">
+				<div class="col-25 small_f">
+					I will 2h ago
+				</div>
+				<div class="col-25 small_f">
+					6:40pm 24-feb-2015
+				</div>
+				<div class="col-25 checkout_button">
+					checkout
+				</div>
+			</div>
+                 </div>	
+                                  <div class="intro">
+			<div class="row">
+ 				<div class="col-25">
+  					 <img src="img/about.jpg" alt=""/>
+ 				</div>
+				 <div class="col-67">
+  					 <div class="row">
+    						<div class="col main_name">
+							HArri HAtti
+    						</div>
+    						 <div class="col remain_name">
+							Marina BAy
+    						</div>
+   					</div>
+   					<div class="row">
+    						<div class="col remain_name">
+							Shopping Mall
+    						</div>
+   						  <div class="col remain_name">
+							I Km Awy
+    						</div>
+   					</div>
+ 				</div>
+				 <div class="col follow_button">
+  					follow
+ 				</div>
+
+			</div>
+			<p>Boasting seven world class department stores and more 
+                        than  400  stores,  boutiques,  and  restaurants,  King  of
+                        Prussia has more pure retail shopping space than ...</p>  
+			<div class="row ">
+				<div class="col-25 small_f">
+					I will 2h ago
+				</div>
+				<div class="col-25 small_f">
+					6:40pm 24-feb-2015
+				</div>
+				<div class="col-25 checkout_button">
+					checkout
+				</div>
+			</div>
+                 </div>	
+                 
+                                   <div class="intro">
+			<div class="row">
+ 				<div class="col-25">
+  					 <img src="img/about.jpg" alt=""/>
+ 				</div>
+				 <div class="col-67">
+  					 <div class="row">
+    						<div class="col main_name">
+							HArri HAtti
+    						</div>
+    						 <div class="col remain_name">
+							Marina BAy
+    						</div>
+   					</div>
+   					<div class="row">
+    						<div class="col remain_name">
+							Shopping Mall
+    						</div>
+   						  <div class="col remain_name">
+							I Km Awy
+    						</div>
+   					</div>
+ 				</div>
+				 <div class="col follow_button">
+  					follow
+ 				</div>
+
+			</div>
+			<p>Boasting seven world class department stores and more 
+                        than  400  stores,  boutiques,  and  restaurants,  King  of
+                        Prussia has more pure retail shopping space than ...</p>  
+			<div class="row ">
+				<div class="col-25 small_f">
+					I will 2h ago
+				</div>
+				<div class="col-25 small_f">
+					6:40pm 24-feb-2015
+				</div>
+				<div class="col-25 checkout_button">
+					checkout
+				</div>
+			</div>
+                 </div>	
+         
+                 
+            
+            </div>       
+
+
+</div>
+          
+         
+       </ion-content>
+
+<style>
+
+.main_name
+{
+font-weight:bold;
+font-size:12px;
+}
+.col-25 > img {
+    height: 47px;
+    margin-top: 12%;
+    width: auto;
+}
+.remain_name
+{
+font-size:10px;
+}
+.follow_button {
+    background: none repeat scroll 0 0 #0c6cc3;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    height: 23px;
+    margin-left: -31px;
+    margin-top: 10px;
+    padding: 2px 10px 8px 14px;
+}
+.intro p {
+    font-size: 10px !important;
+    margin-left: 2%!important;
+    margin-top: 0!important;
+}
+.small_f
+{
+font-size:8px;
+}
+.checkout_button {
+    background: none repeat scroll 0 0 #ff5f11;
+    border-radius: 10px;
+    color: white;
+  
+    font-size: 12px;
+    margin-left: 24%;
+    padding: 0 0 0 13px;
+}
+@media screen and (max-width: 320px) 
+{
+.col-25 > img {
+  
+    width: 57px !important;
+}
+.main_name {
+    font-size: 10px !important;
+   
+}
+.remain_name {
+    font-size: 8px!important;
+}
+.follow_button {
+    
+    font-size: 10px !important;
+    
+    margin-left: -21px!important;
+   
+    padding: 2px 0 0 6px!important;
+}
+.checkout_button {
+    
+    font-size: 9px !important;
+    height: 25px !important;
+    
+    padding: 2px 3px 0 8px !important;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+.checkout_button {
+
+    max-width: 15%;
+ 
+}
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+   </ion-view>

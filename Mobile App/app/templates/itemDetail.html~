@@ -1,0 +1,252 @@
+     <ion-view view-title="{{navTitle}}">
+         <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+         </ion-nav-bar>    
+       <ion-content>
+ 	 <div class="container">
+
+    	  <div class="top_head">
+    		    <p>{{items.description}}</p>
+        </div>
+	      <div class="carousel_images">
+		       <img ng-src="img/content.jpg"/>
+	      </div>
+	      <div class="item_description">	
+	       <div class="row">
+          		<div class="col">
+          			<b>{{items.price}} {{items.currency}}<sub> per {{items.unit}}</sub></b>
+          			<p>$25.00 AUD</p>
+
+          		 </div>
+
+
+
+          		<div class="col">
+				<select data-ng-options="o.name for o in options" data-ng-model="selectedOption"></select>
+
+          			<div class="option">
+                    	   <select>
+					
+                      			<option value="{{itemCollection}}"  ng-repeat="itemCollection in totalitems " ng-selected="selected">{{itemCollection}}</option>
+
+
+                    			</select>
+          				<p>{{items.unit}}</p>
+                </div>
+          		</div>	
+	       </div>
+
+		     <hr>
+		     <p>{{items.longdescription}}</p>
+	      </div>
+
+     </div>
+      <div class="no_item" ng-click="gotocat()">
+  		  <i class="ion-ios-information-outline info_ion"></i>
+  		  <h4> Not this item,select manually...</h4>
+  	 </div>
+   </ion-content>
+        
+    <ion-footer-bar class="custom_bar_height">
+            <div class="row no-pad">
+                <div class="col no-pad"> <button class="button button-stable button_pad">
+                  Re-Scan
+                  </button>
+                </div>
+                <div class="col no-pad">
+                  <button class="button button-stable button_pad">
+                  Add to Cart
+                  </button>
+                </div>
+                <div class="col no-pad">
+                    <button class="button button-stable button_pad button_col">
+                     Buy Now
+                     </button>
+                </div> 
+            </div>	
+           
+             
+            	
+            	
+
+    </ion-footer-bar>
+<style>
+@media screen and (max-width: 320px) {
+.option select
+{
+width: 55% !important;
+}
+
+
+}
+.no-pad{
+
+  padding: 0px !important;
+}
+.custom_bar_height {
+  height: 60px !important;
+  padding: 0px;
+  background: transparent;
+}
+.option select
+{
+    background-image: url("img/input-img.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    border: medium none;
+    float: left;
+    font-size: 26px;
+    margin-left: 11%;
+    text-align: center;
+    width: 59%;
+    background-color: #fff;
+    -webkit-appearance: none;
+    border-bottom: 1px solid #FBF6F6;
+    padding: 0 24px;
+}
+.option p
+{
+float:left;
+margin-left:4%;
+
+}
+.item_price {
+    float: left;
+    width: 50%;
+}
+.no_item
+{
+    background: none repeat scroll 0 0 rgba(249, 228, 84, 0.81);
+       /*background: none repeat scroll 0 0 #fae974;*/
+    height: 34px;
+    position: absolute;
+    bottom:0px;
+    width:100%;
+}
+.no_item h4
+{
+float:left;
+margin-top:3%;
+font-size:14px;
+margin-left:3%;
+}
+.top_head
+{
+ background: none repeat scroll 0 0 white;
+    border: 1px solid white;
+    height: 41px;
+    margin-left: 6%;
+    width: 88%;
+}  
+.top_head p
+{
+ margin-left: 2%;
+    margin-top: 2%;
+font-size: 16px;
+}  
+.carousel_images
+{
+ height: 50%;
+ width: 100%;
+}
+.carousel_images img
+{
+ height: 50%;
+ width: 100%;
+}
+.item_description
+{
+background: none repeat scroll 0 0 white;
+    border: 1px solid white;
+    height: 50%;
+    margin-left: 6%;
+    position: relative;
+    width: 88%
+}
+.item_description hr
+{
+#d1d1d1;
+}
+.row b {
+    color: black;
+    font-size: 15px;
+}
+
+.item_footer
+{
+    background:#EDEDED;
+    width:100%;
+    height:40px;
+}
+.item1
+{
+    color:#838383;
+    border-right: 1px solid #D0D0D0;
+    text-align:center;
+    width:33%;
+    height:38px;
+    float:left;
+}
+.item2
+{
+    color:#838383;
+    border-right: 1px solid #D0D0D0;
+    text-align:center;
+    width:33%;
+    height:40px;
+    float:left;
+}
+.item3
+{
+    color:#838383;
+    margin:0 auto;
+    float:right;
+
+    border-right: 1px solid #D0D0D0;
+    text-align:center;
+    width:33%;
+    height:40px;
+
+}
+
+.item_description > p {
+     color:#838383;	
+     font-size: 12px;
+     margin-left: 3%;
+}
+.col > p {
+     text-decoration: line-through;
+     color: #c2c2c2;
+     font-size: 11px;
+}
+.button_pos
+{
+     position: unset;
+}
+.button_pad {
+  line-height: 55px !important;
+  width: 100%;
+}
+.row sub
+{
+     color: #c2c2c2;
+     font-weight: bold;
+     margin-left: 4px;
+
+}
+.info_ion
+{
+    float: left;
+    font-size: 26px;
+    margin-left: 10%;
+    margin-top: 1%
+}
+.button_col
+{
+    background: none repeat scroll 0 0 #2d7eca !important;
+    color: white !important;
+}
+</style>
+
+   </ion-view>

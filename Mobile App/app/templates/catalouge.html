@@ -1,0 +1,106 @@
+     <ion-view view-title="{{navTitle}}">
+         <ion-nav-bar class="nav-title-slide-ios7 bar-custom">
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+         </ion-nav-bar> 
+   
+       <ion-content>
+	
+		<div> 		
+	  <ion-list>
+				<ion-item class="li_header">
+					<input type="search" placeholder="Browse Categories" ng-model="searchtext">
+				</ion-item>	
+	 	        <div ng-repeat="level in levels | filter:searchtext track by $index ">  
+		 		<ion-item  class="li_color">
+					<em class="{{}} {{level.skip_flag_level2}}" ng-click="showContent()">{{level.catalogue_name}}</em>
+					<div slide-toggle="#child{{$index}}" ng-if="level.level1" class="more_show">+</div>	
+
+				</ion-item>
+				<div id="child{{$index}}" class="slideable">
+				 		<ion-item class="li_child" >
+							<p>{{level.level1}}</p>
+							<div slide-toggle="#sub_child{{$index}}" class="more_show" ng-if="level.level2">+</div>	
+						</ion-item>
+				</div>
+				<div id="sub_child{{$index}}" class="slideable">
+			 		<ion-item class="li_sub_child">
+						<span>{{level.level2}}</span>
+					</ion-item>
+				</div>
+		
+             </div>
+
+	 </ion-list>
+       </ion-content>
+	<ion-footer-bar>
+
+	</ion-footer-bar>
+<style>
+.li_header input {
+   width: 100%;
+   background: transparent;
+}
+.li_header {
+   color: #B0B0B0;
+   border-bottom: 4px solid #DFF0FF;
+}
+.li_color
+{
+	background:#DFF0FF;
+	color:#2F2F2F;
+}
+.li_child
+{
+	background:#CAE6FF;
+	color:#728697;
+}
+.li_sub_child
+{
+	background:#B8DDFF;
+	color:#697A89;
+}
+.item p {
+    float: left;
+    font-size: 16px !important;
+    margin-left:8%;
+    width:88%;		
+}
+.item span
+{
+    float: left;
+    font-size: 16px !important;
+    margin-left:16%;
+    width:80%;	
+}
+em {
+    float: left !important;
+    width: 93% !important;
+}
+.more_show {
+   float: left;
+   font-size: 18px;
+}
+.search_bck
+{
+	background:none;
+	border-radius:none;
+	padding:0px !important;
+}
+.back_col
+{
+    background:#C2C2C2;
+}
+.camera_col
+{
+    color: #636363;
+    font-size: 39px;
+}
+
+
+</style>
+
+   </ion-view>
+
+
+

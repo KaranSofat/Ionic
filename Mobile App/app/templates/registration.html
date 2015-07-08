@@ -1,0 +1,96 @@
+<ion-view view-title="{{'Create-Account' | translate}}">
+  <ion-content>
+
+    <form ng-submit="doRegister()" name="register">
+      <div class="list">
+
+        <label class="item item-input"
+            ng-class="{'has-error': register.firstName.$invalid || register.lastName.$invalid}">
+          <i class="icon ion-person placeholder-icon"></i>
+          <input  type="text"
+                  placeholder="{{ 'First-Name' | translate }}"
+                  ng-model="newUser.firstName"
+                  name="firstName"
+                  minlength="2"
+                  autocomplete="off"
+                  required />
+          <input  type="text"
+                  placeholder="{{'Last-Name' | translate}}"
+                  ng-model="newUser.lastName"
+                  name="lastName"
+                  autocomplete="off"
+                  required />
+        </label>
+        <div ng-messages="register.firstName.$error">
+          <div ng-message="required" class="assertive">{{'First-Name-Reqd' | translate}}</div>
+          <div ng-message="minlength" class="assertive">{{'First-Name-Min-Len' | translate}}</div>
+        </div>
+        <div ng-messages="register.lastName.$error">
+          <div ng-message="required" class="assertive">{{'Last-Name-Reqd' | translate}}</div>
+        </div>
+
+        <div class="item item-input">
+          <i class="icon ion-ios-people placeholder-icon"></i>
+          <ion-radio  type="checkbox"
+                  ng-model="newUser.gender"
+                  ng-value="'M'"
+                  name="gender"
+                  required >{{'Male' | translate}}</ion-radio>
+          <ion-radio  type="checkbox"
+                  ng-model="newUser.gender"
+                  ng-value="'F'"
+                  name="gender"
+                  required>{{'Female' | translate}}</ion-radio>
+        </div>
+        <div ng-messages="register.gender.$error">
+          <div ng-message="required" class="assertive">{{'Field-Reqd' | translate}}</div>
+        </div>
+
+        <label class="item item-input"
+            ng-class="{'has-error': register.email.$invalid}">
+          <i class="icon ion-email placeholder-icon"></i>
+          <input  type="email"
+                  placeholder="{{ 'Your-Email-Address' | translate }}"
+                  ng-model="newUser.email"
+                  name="email"
+                  autocomplete="off"
+                  required />
+        </label>
+        <div ng-messages="register.email.$error">
+          <div ng-message="email" class="assertive">{{'Valid-Email' | translate}}</div>
+          <div ng-message="required" class="assertive">{{'Field-Reqd' | translate}}</div>
+        </div>
+
+        <label class="item item-input"
+            ng-class="{'has-error': register.password.$invalid}">
+          <i class="icon ion-ios-locked placeholder-icon"></i>
+          <input  type="{{passwordInputType}}"
+                  placeholder="{{ 'Choose-Password' | translate }}"
+                  ng-model="newUser.password"
+                  name="password"
+                  autocomplete="off"
+                  ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[A-Za-z0-9]{8,}$/"
+                  required />
+        </label>
+        <div ng-messages="register.password.$error">
+          <div ng-message="required" class="assertive">{{'Field-Reqd' | translate}}</div>
+          <div ng-message="pattern" class="assertive">{{'Password-Pattern' | translate}}</div>
+        </div>
+
+        <div class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-click="togglePasswordInputType()">
+          </label>
+          {{'Show-Password' | translate}}
+        </div>
+
+      </div>
+      <button class="button button-positive center" translate="Sign-Up" ng-click="doRegister()"></button>
+    </form>
+  </ion-content>
+  <ion-footer-bar class="bar-stable">
+  <div class="title font-small">
+  {{'Have-Account' | translate}}<a href="#login" translate="Log-In"></a>
+  </div>
+  </ion-footer-bar>
+</ion-view>

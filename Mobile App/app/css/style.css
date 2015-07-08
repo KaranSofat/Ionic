@@ -1,0 +1,239 @@
+/* Empty. Add your own CSS if you like */
+
+.scroll-content {
+  background-image: url('../img/assets/bg.jpg');
+  background-repeat: repeat;
+}
+
+.image_container {
+  height: 250px;
+  border-bottom: 2px solid;
+  border-bottom-left-radius: 200px 25px;
+  border-bottom-right-radius: 200px 25px;
+  overflow: hidden;
+}
+
+.image_container > img{
+    height: 255px;
+}
+.bar.bar-stable {
+  border-color: #0B0A0A;
+  background-color: #0B0A0A;
+  /* background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%); */
+  color: #444;
+  background: transparent;
+  box-shadow: 5px 0px 30px 15px #444 inset;
+}
+
+.border > img {
+  width: 100%;
+  position: relative;
+  bottom: 24px;
+}
+
+
+a.ion-android-more-vertical {
+  color: #fff;
+  font-size: 42px;
+  position: relative;
+  bottom: 2px;
+}
+.icons_all > a {
+  margin-right: 15px;
+}
+
+.icons_all > a >img {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  bottom: 4px;
+}
+
+.icons_all{
+  text-align: right;
+  width: 100%;
+}
+
+
+.logo > cite {
+  float: left;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 8px;
+}
+
+.logo > img {
+  width: 35px;
+  height: 35px;
+  float: left;
+}
+
+span.logo {
+  width: 50%;
+  float: left;
+  position: relative;
+ 
+}
+
+.card, .list-inset {
+  
+  background: transparent;
+  box-shadow: none !important;
+}
+
+
+.cover > img {
+  width: 85px;
+  height: 85px;
+  
+}
+
+.cover {
+  position: absolute;
+  left: 40%;
+  top: 210px;
+  bottom: 16px;
+}
+.card, .list-inset{
+  margin: 0px 8px !important;
+}
+
+.cover > .inner
+  {
+  position: absolute;
+  top: 9px;
+  left: 24px;
+  color: #797979;
+  font-size: 13px;
+ }
+  
+
+ cite.ion-ios-camera {
+  font-size: 48px;
+  color: #0c6cc3;
+}
+.cover > .inner >cite:last-child{
+  margin-left: 4px;  
+  position: relative;
+  top: -8px;  
+}
+
+.item{
+  background: transparent;
+}
+
+.item-avatar{
+  padding-left: 60px !important;
+}
+
+.checkin{
+  color: #6b6b6b;
+}
+
+.checkin > a{
+  color: #0c6cc3;
+    text-decoration: none;
+}
+  
+h2.checkin {
+  white-space: normal;
+  font-size: 12px;
+} 
+
+.item p{
+  font-size: 10px !important;
+}
+
+i.ion-android-more-horizontal {
+  color: #fff;
+  font-size: 35px;
+  position: relative;
+  bottom: 13px;
+}
+
+cite.icono {
+  float: right;
+  background: #6b6b6b;
+  height: 12px;
+  padding: 2px;
+  margin-top: 5px;
+}
+
+div.col.col-30 span {
+  float: left;
+  border-radius: 50%;
+  border: 1px solid #797979;
+  text-align: center;
+  margin: 0 8px;
+  padding: 10px;
+}
+
+.col.col-30 p {
+  text-align: center;
+}
+
+.col-30 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  float: left;
+}
+
+div.col.col-30 span > a img {
+  width: 45px;
+  height: 45px;
+}
+
+
+div.wrap_activity {
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.clearfix {
+  width: 88%;
+  height: 1px;
+  background: #6b6b6b;
+  padding-left: 72px;
+  padding-right: 72px;
+  text-align: center;
+  margin: 16px 18px;
+}
+
+.inline_button {
+  width: 100%;
+  text-align: center;
+  height: 0;
+}
+
+.inline_button span {
+  width: auto;
+  padding: 5px 15px;
+  position: relative;  
+  bottom: 30px;
+  margin: 9px;
+  font-size: 15px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.col.col-30{
+   width: 30%;
+   text-align: left;
+   color: #6b6b6b;
+}
+
+.white_button{
+   color: #6b6b6b;
+   background: #fff;
+}
+
+.blue_button{
+  color: #fff;
+  background: #0c6cc3;
+ } 
